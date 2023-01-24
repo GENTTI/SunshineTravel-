@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited offer | HTML/CSS/JS</title>
+    <link rel="stylesheet" href="Style.css">
+<style>
+body{
+  Background-Image: Url("https://happytours.eu/wp-content/uploads/2015/09/Albania_Mountains.jpg");
+Background-Size: Cover;
+Background-Repeat: No-Repeat;
+
+}
+h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv{
+
+Background-Image: Url("https://happytours.eu/wp-content/uploads/2015/09/Albania_Mountains.jpg");
+Background-Size: Cover;
+Background-Repeat: No-Repeat;
+Background-Position: Center;
+/* Overflow: Hidden; */
+
+Text-Align: Center;
+Position: Relative;
+Display: Flex;
+Justify-Content:center;
+Align-Items:center;
+}
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+
+}
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background:#00816A;
+    display: inline-block;
+}
+smalltext{
+    padding-top: 2px;
+    font-size: 25px;
+}
+.title{
+  padding-left: 0%;
+  text-align: left;
+}
+#show-offer{
+  Text-Decoration: None;
+  Color: #000;
+  Text-Transform: Uppercase;
+  Padding: 15px;
+  Cursor: Pointer;
+  Background-Color: #Fde02f;
+  Font-Size: 17px;
+  Font-Weight: Normal;
+  Font-Family: "Barlow Condensed";
+  Width: 20%;
+margin-left: 50px
+};
+
+</style>
+</head>
+<body>
+<!-- ===================navbar==================== -->
+<Section Class="Nav-Bar">
+  <img src="img/logo.png" alt="#" height="90" width="100">
+
+  <Div  Class="title"> SunshineTravel</Div>
+  <Ul Class="Menu">
+
+      <Li style="text-align: right;"><a href="Projekti.html">GO BACK 🔙</a></Li>
+  </Ul>
+  </Div>
+
+  <Section Class="Banner">
+    <Div Class="Banner-Text-Item">
+        <Div Class="Banner-Heading">
+            <H1>Limited time offer </H1>
+        </Div>
+        <Form Class="Form">
+          <div id="clockdiv">
+            <div>
+              <span class="days" id="day"></span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div>
+              <span class="hours" id="hour"></span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div>
+              <span class="minutes" id="minute"></span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+              <span class="seconds" id="second"></span>
+              <div class="smalltext">Seconds</div>
+            </div>
+          </div>
+          <a Href="#about"id="show-offer">Show offer </a>
+           
+        </Form>
+    </Div>
+</Section>
+
+<!--===========About Us===============-->
+<Section Class="About" id="about">
+  <Div Class="About-Img">
+      <Img Src="https://www.anitahendrieka.com/wp-content/webp-express/webp-images/uploads/2022/01/DJI_0592-1650x1237.jpg.webp">
+  </Div>
+  <Div Class="About-Text">
+    <h2 style="margin-left:70px">VISIT HIMARE</h2>
+      <h2 style="margin-left:70px">50%OFF</h2>
+      <P style="margin-left:70px">One of the top places to visit albania has to offer those wanted to get off the beaten path is Himare. This is a less busy beach town located a few hours’ drive north of Saranda.
+
+        The views in Himare are incredibly pretty and it’s the perfect place if you want to chill out by the beach for a few days. 
+        
+        There’s a promenade with some really good restaurants to check out. Himare has a more relaxed, chilled vibe than the likes of Saranda.
+        
+        This is one of the best places in Albania to relax but still have options for restaurants and nightlife.
+        
+        I highly recommend making a trip to the old part of Himare which is in the hills, next to the castle. From there you get incredible views of the Riveria and you also get to see a traditional village, it’s so pretty! 
+        
+        </P>
+      <a Href="#" style="margin-left:70px">Show price</a>
+  </Div>
+</Section>
+
+
+
+  
+
+  
+<script>
+  
+var deadline = new Date("jan 26, 2023 15:37:25").getTime();
+  
+var x = setInterval(function() {
+  
+var now = new Date().getTime();
+var t = deadline - now;
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((t % (1000 * 60)) / 1000);
+document.getElementById("day").innerHTML =days ;
+document.getElementById("hour").innerHTML =hours;
+document.getElementById("minute").innerHTML = minutes; 
+document.getElementById("second").innerHTML =seconds; 
+if (t < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME UP";
+        document.getElementById("day").innerHTML ='0';
+        document.getElementById("hour").innerHTML ='0';
+        document.getElementById("minute").innerHTML ='0' ; 
+        document.getElementById("second").innerHTML = '0'; }
+}, 1000);
+</script>
+</body>
+</html>
